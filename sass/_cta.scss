@@ -1,0 +1,171 @@
+.grid-cta {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 8rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem;
+  @include respond(phone-big) {
+    padding: 4rem 1rem;
+  }
+}
+
+.cta {
+  @include column-flex;
+  background-color: $color-white;
+  box-shadow: $shadow-light;
+  border-radius: $big-radius;
+  border: $border-green;
+
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: $shadow;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1rem;
+        @include respond(phone-big) {
+          font-size: 1.8rem;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &:last-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.icon_cta {
+  width: 3.2rem;
+  height: 3.2rem;
+  fill: $color-white;
+}
+
+.container {
+  border-top: $border-green;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.micro {
+  @include column-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+
+  &__icon {
+    fill: $color-primary-dark;
+  }
+  &__howMany {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
+.icon-holder {
+  @include column-flex;
+  border-top: $border-green;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  &__icon {
+    fill: $color-primary-dark;
+  }
+  &__howMany {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    @include respond(tab-port-smaller) {
+      font-size: 1.6rem;
+    }
+    @include respond(tab-port-lest) {
+      font-size: 1.5rem;
+    }
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+
+    p {
+      text-align: center;
+      span {
+        font-size: 2.4rem;
+        color: $color-primary-dark;
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.color {
+  background-color: $transition-background-green;
+}
+.noborder {
+  border: none;
+}
+.price {
+  font-size: 6rem;
+  font-weight: 200;
+  display: inline;
+
+  @include respond(tab-port-lest) {
+    font-size: 5rem;
+  }
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+  span {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: $color-primary-dark;
+    text-transform: uppercase;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+}

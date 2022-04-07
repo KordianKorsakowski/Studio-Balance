@@ -1,0 +1,114 @@
+.section__hero {
+  height: 75vh;
+  background-image: url("../img/hero.WebP");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-text-box {
+  @include column-flex;
+  @include center-absolut;
+  width: max-content;
+  align-items: center;
+  position: absolute;
+}
+.heading-primary {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.8rem;
+  letter-spacing: 1rem;
+  display: inline-block;
+  margin-bottom: 9rem;
+  text-transform: uppercase;
+  @include respond(tab-port-smaller) {
+    letter-spacing: 0.5rem;
+  }
+
+  @include respond(phone-big) {
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    letter-spacing: 0.2rem;
+    font-size: 2.3rem;
+  }
+  @include respond(phone-small) {
+    font-size: 2.1rem;
+  }
+  @include respond(phone-little) {
+    letter-spacing: 0.1rem;
+    font-size: 1.9rem;
+  }
+  @include respond(phone-smaller) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(phone-lest) {
+    font-size: 1.5rem;
+  }
+}
+.company_Name {
+  font-family: "Montserrat", sans-serif;
+  color: $color-primary;
+  font-weight: 500;
+  font-size: 5rem;
+  letter-spacing: 2.5rem;
+  display: inline-block;
+  margin-bottom: 9rem;
+  text-align: center;
+  @include respond(phone-little) {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+  @include respond(phone-lest) {
+    letter-spacing: 1rem;
+    font-size: 4rem;
+  }
+}
+.company_info {
+  @include column-flex;
+  align-items: center;
+
+  p {
+    font-family: "Josefin Sans", sans-serif;
+    color: $color-white;
+    font-size: 2.8rem;
+    letter-spacing: 1rem;
+    justify-content: center;
+
+    @include respond(tab-port-smaller) {
+      font-size: 2.1rem;
+    }
+    @include respond(tab-port-lest) {
+      font-size: 1.9rem;
+    }
+    @include respond(phone-big) {
+      letter-spacing: 0.4rem;
+    }
+    @include respond(phone) {
+      font-size: 2.1rem;
+      letter-spacing: 0.2rem;
+    }
+    @include respond(phone-little) {
+      font-size: 1.9rem;
+      letter-spacing: 0.1rem;
+    }
+    @include respond(phone-smaller) {
+      font-size: 1.7rem;
+    }
+    @include respond(phone-lest) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.animated {
+  animation: show 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.animated-fast {
+  animation: show 0.5s ease-out 0.6s;
+  animation-fill-mode: backwards;
+}

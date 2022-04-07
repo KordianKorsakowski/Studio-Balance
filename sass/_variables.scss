@@ -1,0 +1,30 @@
+//colors$shadow-light
+$color-primary: rgb(138, 185, 51);
+$color-primary-light: #96c047;
+$color-primary-dark: #668b2e;
+$color-primary-light-1: #e8f1d6;
+
+$color-secondary: #293239;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #ccc;
+
+$color-white: #fff;
+//shadow
+
+$shadow: 0 0.5rem 2.5rem rgba(#000, 0.1);
+$shadow-light: 0 0.5rem 2.5rem rgba(#000, 0.05);
+
+//border-top
+$border-green: 1px solid $color-primary;
+$border-white: 1px solid #fff;
+//radius
+$small-radius: 5px;
+$big-radius: 10px;
+
+//transition-background-color
+$transition-background-green: rgba($color-primary, 0.2);
+$transition-background-green-dark: rgba($color-primary, 0.5);

@@ -1,0 +1,97 @@
+.section__footer {
+  background-color: $color-secondary;
+  padding: 3rem;
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+  @include respond(phone) {
+    padding: 1rem;
+  }
+  @include respond(phone-little) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
+  justify-items: center;
+  align-items: center;
+  align-content: space-between;
+  max-width: 120rem;
+  margin: 3rem auto;
+  row-gap: 2rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  &__map {
+    height: 45rem;
+    width: 60rem;
+    @include respond(phone-big) {
+      height: 40rem;
+      width: 50rem;
+    }
+    @include respond(phone) {
+      height: 30rem;
+      width: 40rem;
+    }
+    @include respond(phone-little) {
+      height: 20rem;
+      width: 30rem;
+    }
+    @include respond(phone-lest) {
+      height: 15rem;
+      width: 25rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__contact {
+    @include column-flex;
+    gap: 3rem;
+  }
+  &__socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    border-bottom: $border-green;
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &-adress {
+    color: $color-primary;
+  }
+
+  &-link {
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: $border-green;
+    transition: all 0.3s;
+
+  
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      border-bottom: $border-white;
+    }
+
+    &__noBorder,
+    &__noBorder:hover,
+    &__noBorder:active {
+      border: none;
+    }
+  }
+}

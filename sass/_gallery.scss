@@ -1,0 +1,64 @@
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 2.6rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+
+  @include respond(phone-smaller) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img__con {
+  height: 40rem;
+  transition: all 0.3s;
+  border-radius: $small-radius;
+  &--1 {
+    background-image: url("../img/img1.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+  &--2 {
+    background-image: url("../img/img2.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+  &--3 {
+    background-image: url("../img/img3.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+  &--4 {
+    background-image: url("../img/img4.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+  &--5 {
+    background-image: url("../img/img5.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+  &--6 {
+    background-image: url("../img/img6.WebP");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow;
+    @include respond(tab-port) {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.info__name {
+  color: $color-primary-dark;
+  font-weight: 500;
+  font-size: 2rem;
+}

@@ -1,0 +1,85 @@
+.grid-feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(43rem, 1fr));
+  grid-gap: 6rem;
+  max-width: 110rem;
+  margin: 0 auto;
+  gap: 3rem;
+  @include respond(tab-land) {
+    padding: 0 2rem;
+  }
+  @include respond(tab-port-smaller) {
+    padding: 0 4rem;
+    grid-template-columns: 1fr;
+  }
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}
+
+.feature {
+  @include column-flex;
+  padding: 4.8rem;
+  box-shadow: $shadow-light;
+  border-radius: $small-radius;
+  align-items: center;
+
+  transition: all 0.3s;
+
+  @include respond(tab-land-smaller) {
+    padding: 2.5rem;
+  }
+
+  @include respond(phone-smaller) {
+    padding: 1rem;
+  }
+
+  &:hover {
+    background-color: $transition-background-green;
+    transform: translateY(-0.4rem);
+    box-shadow: $shadow;
+  }
+
+  &__small-container {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.2rem;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+  &__text {
+    display: inline-block;
+    @include respond(tab-port-smaller) {
+      text-align: center;
+    }
+    &--info {
+      text-align: center;
+    }
+  }
+  &__heading {
+    align-self: center;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: $color-primary;
+  }
+}
+
+.feature-info {
+  @include column-flex;
+  padding: 3.2rem 10rem;
+  align-items: center;
+  background-color: rgba($color-primary, 0.2);
+  margin-top: 4.8rem;
+
+  @include respond(phone-big) {
+    padding: 3.2rem 1rem;
+  }
+}
